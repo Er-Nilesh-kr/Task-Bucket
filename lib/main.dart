@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 import 'package:task_app/screens/tasks_screen.dart';
 
 void main() {
