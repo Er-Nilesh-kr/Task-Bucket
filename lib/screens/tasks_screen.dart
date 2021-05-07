@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/screens/add_task_screen.dart';
 import 'package:task_app/widgets/tasks_list.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TasksScreen extends StatelessWidget {
   @override
@@ -11,11 +12,16 @@ class TasksScreen extends StatelessWidget {
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () {
           showModalBottomSheet(
-              context: context, builder: (context) => AddTaskScreen());
+              context: context,
+              isScrollControlled: true,
+              builder: (context) => SingleChildScrollView(
+                      child: Container(
+                    child: AddTaskScreen(),
+                  )));
         },
         child: Icon(
           Icons.add,
-          size: 25.0,
+          size: 35.0,
         ),
       ),
       body: Column(
@@ -29,26 +35,37 @@ class TasksScreen extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     child: Icon(
-                      Icons.list,
-                      size: 40.0,
+                      Icons.assignment_rounded,
+                      size: 55.0,
                       color: Colors.lightBlueAccent,
                     ),
                     backgroundColor: Colors.white,
-                    radius: 30.0,
+                    radius: 40.0,
                   ),
                   SizedBox(
                     height: 12.0,
                   ),
+                  Text('Task Bucket',
+                      style: GoogleFonts.lato(
+                        textStyle: TextStyle(
+                          fontSize: 45,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          shadows: [
+                            Shadow(
+                              offset: Offset(2.0, 2.0),
+                              blurRadius: 3.0,
+                              color: Color.fromARGB(185, 0, 0, 0),
+                            ),
+                          ],
+                        ),
+                      )),
                   Text(
-                    'Task-Bucket',
+                    '  12 Tasks',
                     style: TextStyle(
-                        fontSize: 50,
                         color: Colors.white,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  Text(
-                    '12 Tasks',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400),
                   ),
                 ],
               )),
