@@ -36,21 +36,21 @@ class TasksScreen extends StatelessWidget {
                   CircleAvatar(
                     child: Icon(
                       Icons.assignment_rounded,
-                      size: 55.0,
+                      size: 68.0,
                       color: Colors.lightBlueAccent,
                     ),
                     backgroundColor: Colors.white,
-                    radius: 40.0,
+                    radius: 50.0,
                   ),
                   SizedBox(
                     height: 12.0,
                   ),
                   Text('Task Bucket',
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.pacifico(
                         textStyle: TextStyle(
-                          fontSize: 45,
+                          fontSize: 50,
                           color: Colors.white,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                           shadows: [
                             Shadow(
                               offset: Offset(2.0, 2.0),
