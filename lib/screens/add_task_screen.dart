@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:task_app/models/task_data.dart';
 
 class AddTaskScreen extends StatelessWidget {
-  final Function addTaskCallback;
-  AddTaskScreen(this.addTaskCallback);
-
   @override
   Widget build(BuildContext context) {
-    String newTaskTile;
+    String newTaskTitle;
 
     return Container(
       color: Color(0xff757575),
@@ -33,7 +32,7 @@ class AddTaskScreen extends StatelessWidget {
               autofocus: true,
               textAlign: TextAlign.center,
               onChanged: (newValue) {
-                newTaskTile = newValue;
+                newTaskTitle = newValue;
               },
             ),
             SizedBox(
@@ -41,7 +40,8 @@ class AddTaskScreen extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                addTaskCallback(newTaskTile);
+                Provider.of<TaskData>(context).addTask(newTaskTitle);
+                Navigator.pop(context);
               },
               child: Text(
                 'Add',
