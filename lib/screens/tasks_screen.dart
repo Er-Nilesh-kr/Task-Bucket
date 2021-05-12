@@ -65,7 +65,7 @@ class TasksScreen extends StatelessWidget {
                         ),
                       )),
                   Text(
-                    '   ${Provider.of<TaskData>(context).taskCount} Tasks',
+                    '  ${Provider.of<TaskData>(context).taskCount} Tasks | Completed: ${Provider.of<TaskData>(context).completedTask}  Pending: ${Provider.of<TaskData>(context).pendingTask}',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
