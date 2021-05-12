@@ -20,12 +20,12 @@ class AddTaskScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Add Task',
+              'Enter Task Title',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.lightBlueAccent,
-                fontSize: 34.0,
-                fontWeight: FontWeight.w700,
+                fontSize: 31.0,
+                fontWeight: FontWeight.w600,
               ),
             ),
             TextField(
@@ -47,7 +47,7 @@ class AddTaskScreen extends StatelessWidget {
               child: Text(
                 'Add',
                 style: TextStyle(
-                    color: Colors.white, fontSize: 18.0, letterSpacing: 1.0),
+                    color: Colors.white, fontSize: 16.0, letterSpacing: 1.0),
               ),
               style: ButtonStyle(
                   backgroundColor:
