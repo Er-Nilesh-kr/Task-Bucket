@@ -18,6 +18,20 @@ class TaskData extends ChangeNotifier {
     return _tasks.length;
   }
 
+  int get pendingTask {
+    int pending = 0;
+    _tasks.forEach((element) {
+      if (element.isDone == false) {
+        pending++;
+      }
+    });
+    return pending;
+  }
+
+  int get completedTask {
+    return (_tasks.length - pendingTask);
+  }
+
   void addTask(String newTaskTitle) {
     final task = Task(name: newTaskTitle);
     _tasks.add(task);
